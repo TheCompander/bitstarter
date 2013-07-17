@@ -12,6 +12,10 @@
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,700,600,800' rel='stylesheet' type='text/css'>
 
+    <!-- Requirements for social buttons -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//raw.github.com/noizwaves/bootstrap-social-buttons/master/social-buttons.css " rel="stylesheet">
+
     <style type="text/css">
       
       /* Media Query: Add 60px padding for large screens */
@@ -67,13 +71,18 @@
       padding: 3% 0%;
       }
 
-      .video, .statistics {
+      .video, .statistics, .thermometer, .order, .social {
       text-align: center;
       }
 
       .statistics h3, .statistics p {
       color: white;
       }
+
+      .order {
+      padding: 2% 0%;
+      }
+
       </style>
 </head>
 
@@ -102,46 +111,85 @@
 
   <!-- body:container: row-fluid headings within container for responsive postioning of elements -->
   <div class="container">
+
     <!-- container:heading: -->
     <div class="row-fluid heading">
       <div class="span12">
 	<h1>Bitstarter Title</h1>
       </div>
-    </div>
+    </div><!--/.heading -->
+
     <!-- container:subheading: to make paragraph stand out with .lead in css -->
     <div class="row-fluid subheading">
       <div class="span12">
 	<p class="lead">This is my first bitstarter project.</p>
       </div>
-    </div>
+    </div><!--/.subheading -->
+    
+    <!-- Bitstarter pitch section -->
     <!-- container:pitch: create pitch div to hold our bitstarter pitch info -->
     <div class="row-fluid pitch">
+      
+      <!-- pitch:video: -->
       <div class="span5 offset1 video">
 	<img class="img-polaroid" src="http://placehold.it/480x300">
-      </div>
+      </div><!--/.video -->
 
       <!-- pitch:actions: create actions div to hold stats, order and share buttons -->
       <div class="span5 actions">
-	<!-- actions:statistics: -->
-	<div class="span8 offset2 statistics">
-	    
-	  <!-- statistics:linediv-l: create linediv class within each span to draw lines depending on media queries -->
-	  <div class="span4 linediv-l">
-	    <h3>1000</h3> <p>backers</p>
-	  </div>
-	  <!-- statistics:linediv-c: -->  
-	  <div class="span4 linediv-c">
-	    <h3>$6000</h3> <p>of $10,000</p>
-	  </div>
-	  <!-- statistics:linediv-r: -->
-	  <div class="span4 linediv-r">
-	    <h3>10</h3> <p>days left</p>
-	  </div>
 
-	</div><!--/.statistics -->
+	<!-- actions:statistics: -->
+	<div class="span8 offset2">
+	  <div class="statistics">
+	    
+	    <!-- statistics:linediv-l: create linediv class within each span to draw lines depending on media queries -->
+	    <div class="span4">
+	      <div class="linediv-l">
+		<h3>1000</h3> <p>backers</p>
+	      </div><!--/.linediv-l -->
+	    </div>
+
+	    <!-- statistics:linediv-c: -->  
+	    <div class="span4">
+	      <div class="linediv-c">
+		<h3>$6000</h3> <p>of $10,000</p>
+	      </div><!--/.linediv-c -->
+	    </div>
+
+	    <!-- statistics:linediv-r: -->
+	    <div class="span4">
+	      <div class="linediv-r">
+		<h3>10</h3> <p>days left</p>
+	      </div><!--/.linediv-r -->
+	    </div>
+
+	  </div><!--/.statistics -->
+	</div>
+	
+	<!-- actions:thermometer: bootstrap progress bar from http://twitter.github.io/bootstrap/components.html#progress -->
+	<div class="span10 offset1">
+	  <div class="thermometer progress active">
+	    <div class="bar bar-success" style="width: 60%;"></div>
+	    <div class="bar bar-warning" style="width: 40%;"></div>
+	  </div><!--/.thermometer -->
+	</div>
+
+	<!-- actions:order: bootstrap button from http://twitter.github.io/bootstrap/basecss.html#buttons -->
+	<div class="span6 offset3 order">
+	  <button class="btn btn-success btn-large">Preorder</button>
+	</div><!--/.order-->
+
+	<!-- actions:social: social buttons from http://noizwaves.github.io/bootstrap-socialbuttons -->
+	<div class="span8 offset2 social">
+	  <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
+	  <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
+	</div><!--/.social -->
+
       </div><!--/.actions -->
 
     </div><!--/.pitch -->
+
+
 
   </div><!--/.container -->
 </body>
