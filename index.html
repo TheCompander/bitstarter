@@ -14,14 +14,30 @@
 
     <style type="text/css">
       
-      <!-- Media Query: Add 60px padding for large screens -->
+      /* Media Query: Add 60px padding for large screens */
       @media (min-width: 980px) {
       body {
       padding-top: 60px;
       }
+      .linediv-l {
+      border-right: 1px white solid;
+      }
+      .linediv-r {
+      border-left: 1px white solid;
+      }
       }
   
-      <!-- Text Formatting: use of imported fonts as first preference -->
+      /* Media Query: Small screens and phones */
+      @media (max-width: 480px) {
+      .linediv-l {
+      border-bottom: 1px white solid;
+      }
+      .linediv-r {
+      border-top: 1px white solid;
+      }
+      }
+      
+      /* Text Formatting: use of imported fonts as first preference */
       body {
       font-family: 'Open Sans', Helvetica, Arial, sans-serif;
       }
@@ -30,13 +46,40 @@
       text-align: center;
       font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
       }
+
+      p.lead {
+      font-size: 24px;
+      line-height 30px;
+      padding-top: 1.5%;
+      }
+
+      p {
+      font-size: 18px
+      line-height: 24px;
+      }
       
+      .pitch {
+      padding: 2% 0%;
+      }
+      
+      .actions {
+      background-color: #343434;
+      padding: 3% 0%;
+      }
+
+      .video, .statistics {
+      text-align: center;
+      }
+
+      .statistics h3, .statistics p {
+      color: white;
+      }
       </style>
 </head>
 
 <body>
 
-  <!-- Navbar: http://twitter.github.io/bootstrap/examples/starter-template.html -->
+  <!-- body:navbar: http://twitter.github.io/bootstrap/examples/starter-template.html -->
   <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
@@ -53,62 +96,53 @@
 	    <li><a href="#contact">Contact</a></li>
 	  </ul>
 	</div><!--/.nav-collapse -->
-      </div>
-    </div>
-  </div>
+      </div><!--/.container -->
+    </div><!--/.navbar-inner -->
+  </div><!--/.navbar -->
 
-  <!-- Use of row-fluid headings within container for responsive postioning of elements -->
+  <!-- body:container: row-fluid headings within container for responsive postioning of elements -->
   <div class="container">
+    <!-- container:heading: -->
     <div class="row-fluid heading">
       <div class="span12">
 	<h1>Bitstarter Title</h1>
-	</div>
       </div>
-
-    <!-- Bootstrap typography: to make paragraph stand out with .lead -->
+    </div>
+    <!-- container:subheading: to make paragraph stand out with .lead in css -->
     <div class="row-fluid subheading">
       <div class="span12">
 	<p class="lead">This is my first bitstarter project.</p>
-	</div>
       </div>
-
+    </div>
+    <!-- container:pitch: create pitch div to hold our bitstarter pitch info -->
     <div class="row-fluid pitch">
       <div class="span5 offset1 video">
 	<img class="img-polaroid" src="http://placehold.it/480x300">
-	</div>
+      </div>
 
-      <div class="span6">
-	<div class="thermometer">
-	  Thermometer
+      <!-- pitch:actions: create actions div to hold stats, order and share buttons -->
+      <div class="span5 actions">
+	<!-- actions:statistics: -->
+	<div class="span8 offset2 statistics">
+	    
+	  <!-- statistics:linediv-l: create linediv class within each span to draw lines depending on media queries -->
+	  <div class="span4 linediv-l">
+	    <h3>1000</h3> <p>backers</p>
 	  </div>
-	<div class="order">
-	  Order
+	  <!-- statistics:linediv-c: -->  
+	  <div class="span4 linediv-c">
+	    <h3>$6000</h3> <p>of $10,000</p>
 	  </div>
-	<div class="social">
-	  Social
+	  <!-- statistics:linediv-r: -->
+	  <div class="span4 linediv-r">
+	    <h3>10</h3> <p>days left</p>
 	  </div>
-	</div>
-      </div>
-    <div class="row section1">
-      <div class="span12">
-	Marketing Section 1
-	</div>
-      </div>
-    <div class="row section2">
-      <div class="span12">
-	Marketing Section 2
-	</div>
-      </div>
-    <div class="row faq">
-      <div class="span12">
-	FAQ
-	</div>
-      </div>
-    <div class="row footer">
-      <div class="span12">
-	Footer
-	</div>
-      </div>
-    </div>
-  </body>
+
+	</div><!--/.statistics -->
+      </div><!--/.actions -->
+
+    </div><!--/.pitch -->
+
+  </div><!--/.container -->
+</body>
 </html>
