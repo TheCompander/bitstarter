@@ -33,6 +33,9 @@
   
       /* Media Query: Small screens and phones */
       @media (max-width: 480px) {
+      .copy {
+      padding: 2.5% 10%;
+      }
       .linediv-l {
       border-bottom: 1px white solid;
       }
@@ -62,6 +65,8 @@
       line-height: 24px;
       }
       
+      /* Pitch Section */
+      
       .pitch {
       padding: 2% 0%;
       }
@@ -81,6 +86,18 @@
 
       .order {
       padding: 2% 0%;
+      }
+
+      /* Marketing Section */
+      
+      .copy {
+      padding-top: 2.5%;
+      padding-bottom: 2.5%;
+      text-align: justify;
+      }
+
+      .asset {
+      padding: 2.5% 0%;
       }
 
       </style>
@@ -126,7 +143,7 @@
       </div>
     </div><!--/.subheading -->
     
-    <!-- Bitstarter pitch section -->
+    <!-- Bitstarter Pitch Section -->
     <!-- container:pitch: create pitch div to hold our bitstarter pitch info -->
     <div class="row-fluid pitch">
       
@@ -189,6 +206,34 @@
 
     </div><!--/.pitch -->
 
+    <!-- Bitstarter Marketing Section -->
+    <!-- container:section1: -->
+    <div class="row-fluid section1">
+      <!-- section1:asset: -->
+      <div class="span5 offset1 asset">
+	<img class="img-polaroid" src="http://placehold.it/480x300">
+      </div><!--/.asset -->
+      <!-- section1:copy: -->
+      <div class="span5 copy">
+	<p>
+	  Some marketing mumbojumbo
+	</p>
+      </div><!--/.copy -->
+    </div><!--/.section1 -->
+    
+    <!-- container:section2: -->
+    <div class="row-fluid section2">
+      <!-- section2:copy: -->
+      <div class="span5 offset1 copy copy-right">
+	<p>
+	  Some more mumbojumbo
+	</p>
+      </div><!--/.copy -->
+      <!-- section2:asset: -->
+      <div class="span5 asset">
+	<img class="img-polaroid" src="http://placehold.it/480x300">
+      </div><!--/.asset -->
+    </div><!--/.section2 -->
 
 
   </div><!--/.container -->
