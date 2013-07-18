@@ -100,7 +100,7 @@
       padding: 2.5% 0%;
       }
 
-      </style>
+    </style>
 </head>
 
 <body>
@@ -235,7 +235,58 @@
       </div><!--/.asset -->
     </div><!--/.section2 -->
 
+    <!-- Bitstarter FAQ Section -->
+    <!-- container:faq -->
+    <div class="row-fluid faq">
+      <!-- faq:accordion: bootstrap accordion to collapse information from http://twitter.github.io/bootstrap/javascript.html#collapse -->
+      <div class="span10 offset1">
+	<h3>FAQ</h3>
+	<div class= "accordion" id="accordion2">
+	 
+	  <!-- accordion:accordion-group -->
+	  <div class="accordion-group">
+	    <!-- accordion-group:accordion-heading: -->
+	    <div class="accordion-heading">
+	      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+		What does FAQ stand for?
+	      </a>
+	    </div><!--/.accordion-heading -->
+	    <!-- accordion-group:accordion-body -->
+	    <div id="collapseOne" class="accordion-body collapse">
+	      <!-- accordion-body:accordion-inner -->
+	      <div class="accordion-inner">
+		Frequently Asked Question.
+	      </div><!--/.accordion-inner -->
+	    </div><!--/.accordion-body -->
+	  </div><!--/.accordion-group -->
 
+	  <!-- accordion:accordion-group -->
+	  <div class="accordion-group">
+            <!-- accordion-group:accordion-heading: -->
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                What's a Frequently Asked Question?
+              </a>
+            </div><!--/.accordion-heading -->
+            <!-- accordion-group:accordion-body -->
+            <div id="collapseTwo" class="accordion-body collapse">
+              <!-- accordion-body:accordion-inner -->
+              <div class="accordion-inner">
+                A question which is commonly asked by users
+              </div><!--/.accordion-inner -->
+            </div><!--/.accordion-body -->
+          </div><!--/.accordion-group -->
+
+	</div><!--/.accordion -->
+      </div>
+    </div><!--/.faq -->
+    
   </div><!--/.container -->
+
+  <!-- Javascripts: for navbar and FAQ, placed her to load page faster -->
+  <script src="//twitter.github.io/bootstrap/assets/js/jquery.js"></script>
+  <script src="//twitter.github.io/bootstrap/assets/js/bootstrap.js"></script>
+
+
 </body>
 </html>
